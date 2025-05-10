@@ -1,0 +1,19 @@
+<web-app>
+  <servlet>
+    <servlet-name>AddExamServlet</servlet-name>
+    <servlet-class>com.exam.servlet.AddExamServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddExamServlet</servlet-name>
+    <url-pattern>/AddExamServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ViewResultsServlet</servlet-name>
+    <servlet-class>com.exam.servlet.ViewResultsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewResultsServlet</servlet-name>
+    <url-pattern>/ViewResultsServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
