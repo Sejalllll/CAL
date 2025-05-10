@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
+<%@ page import="java.sql.*" %>
+<%
+    ResultSet rs = (ResultSet) request.getAttribute("resultSet");
+%>
+<html>
+<head>
+  <title>View Results</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Exam Results</h1>
+  <table border="1">
+    <tr>
+      <th>Student Name</th>
+      <th>Subject</th>
+      <th>Marks</th>
+      <th>Status</th>
+    </tr>
+    <%
+        while (rs != null && rs.next()) {
+    %>
+    <tr>
+      <td><%= rs.getString("student_name") %></td>
+      <td><%= rs.getString("subject") %></td>
+      <td><%= rs.getInt("marks") %></td>
+      <td><%= rs.getString("status") %></td>
+    </tr>
+    <% } %>
+  </table>
+</body>
+</html>
